@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for i in users %}
+    <h2>Date : {{i.date | date:"D d M Y"}}</h2>
+    <h3>Id : {{i.id}}</h3>
+    
+    <h3>Name : {{i.name}}</h3>
+    {% comment %} length filter {% endcomment %}
+    <h3>Name : {{i.name | length}}</h3> 
+    {% comment %} add filter {% endcomment %}
+    <h3>Name : {{i.name | add:" Developer"}}</h3>
+    {% comment %} join filter {% endcomment %}
+    <h3>Name : {{i.name | join:"-"}}</h3>
+    <h3>User Name : {{i.username}}</h3>
+    <h3>Email : {{i.email}}</h3>
+    <h3>Phone : {{i.phone}}</h3>
+    <h3>Website : {{i.website}}</h3>
+    {% endfor %}
+</body>
+</html>
